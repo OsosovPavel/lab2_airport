@@ -17,12 +17,12 @@ public class FlightReduce extends Reducer<WComparable,Text, Text, Text> {
         int SUM = 0;
         int COUNT = 0;
 
-        Iterator<Text> iter = values.iterator();
-        Text name = new Text(iter.next());
+        Iterator<Text> itr = values.iterator();
+        Text name = new Text(itr.next());
         double min = Double.MAX_VALUE;
         double max = Double.MIN_VALUE;
-        while (iter.hasNext()) {
-            double currentValue = Double.parseDouble(iter.next().toString());
+        while (itr.hasNext()) {
+            double currentValue = Double.parseDouble(itr.next().toString());
             min = Double.min(min, currentValue);
             max = Double.max(max, currentValue);
             SUM+= currentValue;
