@@ -7,7 +7,7 @@ import java.io.IOException;
 import org.apache.hadoop.io.WritableComparator;
 import org.apache.hadoop.io.WritableComparable;
 
-public class GComparator extends WritableComparable {
+public class GComparator extends WritableComparator {
     protected GComparator(){
         super(WComparable.class, true);
     }

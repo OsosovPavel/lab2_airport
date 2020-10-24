@@ -1,5 +1,6 @@
 package ru.lab2_airport;
 
+import com.oracle.jrockit.jfr.FlightRecorder;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.Text;
 
@@ -22,12 +23,16 @@ public class airport_job {
         MultipleInputs.addInputPath(job, new Path(args[0]), TextInputFormat.class, FlightMapper.class);
         MultipleInputs.addInputPath(job, new Path(args[1]), TextInputFormat.class, NameMapper.class);
 
-
         FileOutputFormat.setOutputPath(job, new Path(args[2]));
         job.setPartitionerClass(FlightPartitioner.class);
         job.setGroupingComparatorClass(GComparator.class);
+        job.setReducerClass(FlightReduce.class);
+        job.setMapOutputKeyClass(WComparable.class);
+        job.setMapOutputValueClass(Text.class);
 
-
+        job.setOutputKeyClass(Text.class);
+        job.setMapOutputValueClass(Text.class);
+        job.setNumReduceTasks(2);
 
     }
 }
