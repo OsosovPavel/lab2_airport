@@ -24,7 +24,8 @@ public class airport_job {
 
 
         FileOutputFormat.setOutputPath(job, new Path(args[2]));
-        job.setPartitionerClass(FlightPartitioer.class);
+        job.setPartitionerClass(FlightPartitioner.class);
+        job.setGroupingComparatorClass(GComparator.class);
 
 
 
