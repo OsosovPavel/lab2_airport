@@ -1,8 +1,6 @@
 package ru.lab2_airport;
 
 import org.apache.hadoop.io.WritableComparable;
-import org.apache.yetus.audience.InterfaceAudience;
-
 import java.io.DataInput;
 import java.io.DataOutput;
 import java.io.IOException;
@@ -43,7 +41,6 @@ public class WComparable implements WritableComparable{
     public int compareTo(Object o){
         WComparable elem=(WComparable) o;
         return this.airportID - elem.airportID > 0 ? 1 :
-
+                ((this.airportID- elem.airportID == 0) && (this.group- elem.group>0) ? 1 : -1);
     }
-
 }
