@@ -2,6 +2,7 @@ package ru.lab2_airport;
 
 import org.appache.hadoop.io.IntWritable;
 import org.appache.hadoop.io.IntWritable;
+import org.appache.hadoop.io.IntWritable;
 
 
 
