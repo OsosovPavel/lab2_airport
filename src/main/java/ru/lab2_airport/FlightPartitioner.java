@@ -1,2 +1,4 @@
-package ru.lab2_airport;public class FlightPartitioner {
+package ru.lab2_airport;
+
+public class FlightPartitioner {
 }
