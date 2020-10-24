@@ -11,7 +11,7 @@ public class airport_job {
         if(args.length != 3){
             System.exit(-1);
         }
-      Job job =Job.getIntances();
+      Job job =Job.getInstance();
       job.setJarByClass(FlightJob.class);
       job.setJobName("JoinJob");
       MultipleInputs.addInputPath(job, new Path(args[0]), TextInputFormat.class, FlightMapper.class);

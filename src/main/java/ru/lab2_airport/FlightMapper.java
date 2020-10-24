@@ -1,9 +1,9 @@
 package ru.lab2_airport;
 
-import org.appache.hadoop.io.IntWritable;
-import org.appache.hadoop.io.LongWritable;
-import org.appache.hadoop.io.Text;
-import org.appache.hadoop.mapreduce.Mapper;
+import org.apache.hadoop.io.IntWritable;
+import org.apache.hadoop.io.LongWritable;
+import org.apache.hadoop.io.Text;
+import org.apache.hadoop.mapreduce.Mapper;
 
 import java.io.IOException;
 
