@@ -1,0 +1,7 @@
+ru/lab2_airport/FlightMapper.class
+ru/lab2_airport/NameMapper.class
+ru/lab2_airport/FlightReduce.class
+ru/lab2_airport/FlightPartitioner.class
+ru/lab2_airport/GComparator.class
+ru/lab2_airport/WComparable.class
+ru/lab2_airport/airport_job.class
