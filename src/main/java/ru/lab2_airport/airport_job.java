@@ -33,6 +33,6 @@ public class airport_job {
         job.setOutputKeyClass(Text.class);
         job.setMapOutputValueClass(Text.class);
         job.setNumReduceTasks(2);
-
+        System.exit(job.waitForCompletion(true) ? 0:1);
     }
 }
